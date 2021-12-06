@@ -34,3 +34,23 @@ STDIN Function
 3
 
 ![image](https://user-images.githubusercontent.com/25504715/144847795-406a9177-f581-46e0-9cb3-4e9d555a1ec0.png)
+
+# Code
+
+```js
+function sockMerchant(n, ar) {
+  let count = 0;
+  let colors = {};
+
+  for (const color of ar) {
+    if (colors[color]) {
+      count++;
+      delete colors[color];
+    } else {
+      colors[color] = true;
+    }
+  }
+
+  return count;
+}
+```
